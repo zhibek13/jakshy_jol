@@ -4,5 +4,5 @@ from . import views
 
 
 urlpatterns = [
-    path('news/', views.NewsListCreate.as_view())
+    path('news/', views.NewsList.as_view())
 ]
