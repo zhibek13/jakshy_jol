@@ -9,3 +9,4 @@ class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
         fields = "__all__"
+        # read_only_fields = ('number_of_news', 'text',)
