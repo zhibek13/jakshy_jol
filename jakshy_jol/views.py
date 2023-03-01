@@ -5,15 +5,15 @@ from .models import News
 from .serializers import NewsSerializer
 
 
-# class NewsListCreate(ListCreateAPIView):
+class NewsListCreate(ListCreateAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer
+
+# class NewsCreateAPIView(CreateAPIView):
 #     queryset = News.objects.all()
 #     serializer_class = NewsSerializer
-
-class NewsCreateAPIView(CreateAPIView):
-    queryset = News.objects.all()
-    serializer_class = NewsSerializer
-
-
-class NewsListAPIView(ListAPIView):
-    queryset = News.objects.all()
-    serializer_class = NewsSerializer
+#
+#
+# class NewsListAPIView(ListAPIView):
+#     queryset = News.objects.all()
+#     serializer_class = NewsSerializer
